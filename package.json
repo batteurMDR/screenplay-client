@@ -1,0 +1,35 @@
+{
+  "name": "screenplay-client",
+  "version": "1.0.0",
+  "description": "Client de screencast",
+  "main": "main.js",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "menubar": "^5.2.3",
+    "peerjs": "^0.3.17",
+    "simple-peer": "^9.1.2"
+  },
+  "devDependencies": {
+    "electron": "^3.0.4",
+    "electron-builder": "^20.38.5",
+    "electron-packager": "^13.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-packager . ScreenPlay --all",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -mwl"
+  },
+  "author": "Louis Benoist--Foucher <louis@estiam.com>",
+  "license": "ISC",
+  "build": {
+    "appId": "com.estiam.screenplay",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
